@@ -1,0 +1,147 @@
+.container
+{
+    max-width: 1170px;
+    margin: auto;
+    @include res 
+    {
+        padding: 15px;
+    }
+}
+header 
+{
+    padding: 20px 0;
+    .container 
+    {
+        @include flex;
+        @include res 
+    {
+        flex-direction: column;
+    }
+    }
+.logo 
+{
+   
+    h2 
+    {
+    font-size: 36px;
+    line-height: 50px;
+    span 
+    {
+        color: $brand;
+    }
+    }
+}
+ nav 
+ {
+     margin-left: auto;
+ }
+ul 
+{
+    li 
+    {
+        display: inline;
+        a 
+        {
+            padding: 20px; 
+              color: $brand;
+              font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+            &:hover 
+            {
+              color: $g;
+            }
+        }
+    }
+}
+}
+ 
+.btn 
+{
+    background: $brand;
+    color: $w;
+    display: inline-block;
+    padding: 10px 25px;
+    border: 3px solid $brand;
+    &:hover 
+    {
+        border: double 3px $w;
+    }
+}
+
+.banner 
+{
+    .container 
+    {
+        @include flex;
+    }
+    &-left 
+    {
+        flex-basis: 50%;
+        @include res 
+    {
+       order: 2;
+       flex-basis: auto;
+    }
+     h1 
+     {
+        font-size: 48px;
+        line-height: 50px;
+     }
+    }
+    &-right 
+    {
+        flex-basis: 50%;
+        @include res 
+        {
+           order: 1;
+           flex-basis: auto;
+        }
+    }
+}
+
+.counter 
+{
+    background: $brand;
+    color: $w;
+    .container
+    {
+        @include flex(space-around)
+    }
+}
+
+.quote
+{
+    background: linear-gradient(rgba(140, 15, 15, 0.733),rgba(103, 247, 14, 0.5)),url(../img/quote.png);
+    background-attachment: fixed;
+    .container 
+    {
+        max-width: 60%;
+        text-align: center;
+        @include res 
+        {
+            max-width: 100%;
+        }
+        h2 
+        {
+            color: $brand;
+            font-weight: 700;
+font-size: 36px;
+line-height: 45px;
+        }
+        p 
+        {
+            color: $w;
+            padding: 20px 10%;
+        }
+    }
+}
+.sticky
+{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.5);
+    z-index: 9999;
+    background: $w;
+}
